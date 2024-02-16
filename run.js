@@ -1,6 +1,6 @@
 "use strict";
 
-const Bridge = require("./../index.js");
+const Bridge = require("./index.js");
 
 let config = require("./config.js");
 try {
