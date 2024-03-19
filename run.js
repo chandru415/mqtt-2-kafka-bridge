@@ -1,4 +1,5 @@
 "use strict";
+const mqtt = require("mqtt");
 
 const Bridge = require("./index.js");
 
@@ -9,6 +10,8 @@ try {
 } catch(_){
     // empty
 }
+
+console.log(config, 'config');
 
 const bridge = new Bridge(config);
 bridge.on("error", console.error);
