@@ -4,13 +4,13 @@ module.exports = {
 
     // mqtt connection options
     mqtt: { // # see https://github.com/mqttjs/MQTT.js#mqttclientstreambuilder-options
-        url: null,
+        url: 'mqtt://localhost:1883',
         options: {
             clientId: "example-client",
-            host: "mqtt.xxxx.com",
+            // host: "localhost",
             port: 1883,
             protocolId: "MQTT",
-           protocolVersion: 4,
+            protocolVersion: 5,
         }
     },
 
@@ -20,7 +20,7 @@ module.exports = {
         noptions: {
             //"debug": "all",
 
-            "metadata.broker.list": "localhost:9092",
+            "metadata.broker.list": "kafka:9092",
             "client.id": "mqtt-bridge-example-client",
             "event_cb": true,
             "compression.codec": "none",

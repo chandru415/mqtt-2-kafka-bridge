@@ -1,8 +1,9 @@
-FROM node:node:19.0.0-slim as build-step
+FROM node:19.0.0-slim as build-step
 
 WORKDIR /app
 COPY package*.json ./
+RUN npm i -g nodemon
 RUN npm install
 COPY . .
 
-RUN npm run start
+CMD [ "nodemon", "run.js" ]
